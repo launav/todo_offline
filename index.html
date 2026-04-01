@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tareas Offline</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Lista de tareas</h1>
+      <p>Gestión local de tareas con soporte offline.</p>
+    </header>
+
+    <section class="panel">
+      <form id="task-form" class="task-form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Escribe una nueva tarea"
+          maxlength="120"
+          required
+        />
+        <button type="submit">Añadir</button>
+      </form>
+
+      <div class="task-controls">
+        <label class="checkbox-label">
+          <input type="checkbox" id="pending-filter" />
+          Mostrar solo pendientes
+        </label>
+        <button id="clear-completed-btn" type="button" class="secondary-btn">
+          Eliminar completadas
+        </button>
+      </div>
+
+      <p id="status-message" class="status-message"></p>
+
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
